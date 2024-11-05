@@ -40,7 +40,7 @@ structurizr-cli validate -workspace ./demo/stage-1/workspace.dsl
 
 ### push
 ```bash
-structurizr-cli push -url http://localhost:8088/api -id 2 -key 354810fc-2e19-4188-baa5-2d2cce410e96 -secret d5a58637-76af-4bf9-a13c-42109af05fae -workspace ./demo/stage-1/workspace.dsl
+structurizr-cli push -archive false -url http://localhost:8088/api -id 2 -key 354810fc-2e19-4188-baa5-2d2cce410e96 -secret d5a58637-76af-4bf9-a13c-42109af05fae -workspace ./demo/stage-1/workspace.dsl
 ```
 
 
