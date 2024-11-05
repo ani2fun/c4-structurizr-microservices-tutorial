@@ -1,6 +1,6 @@
 workspace {
     name "Stage - 2"
-    description "Monolithic Architectural Style"
+    description "Transitioning into Microservices"
 
     model {
         // Define software systems, containers and components
