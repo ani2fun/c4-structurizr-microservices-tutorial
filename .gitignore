@@ -28,5 +28,5 @@ docker-compose.override.yml
 # Ignore temporary system files
 Thumbs.db
 
-# Ignore anything from scratches
-scratches/
+# Ignore anything from dnc - do not commit
+dnc/
