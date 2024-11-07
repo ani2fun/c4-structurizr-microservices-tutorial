@@ -10,21 +10,21 @@ Java: 17.0.7/Amazon.com Inc. (/Library/Java/JavaVirtualMachines/amazon-corretto-
 OS: Mac OS X 15.1 (aarch64)
 ```
 
-# Upload Big Bank Plc application workspace: 
+# Upload Big Bank Plc application workspace:
 - Open : http://localhost:8088/
-- Enter username: `structurizr` and password: `password` 
+- Enter username: `structurizr` and password: `password`
 - Click on create new workspace
 - Go to Settings of newly created workspace
 - Copy **Structurizr CLI parameters**
-- e.g. `-url http://localhost:8088/api -id 1 -key 0f25505d-1ebd-4cc4-b8f3-0b0e7e592599 -secret 44d7e6ac-4872-4808-b030-d0485c813913`
+- e.g. `-url http://localhost:8088/api -id 1 -key bdc6f7a8-0df1-4e5c-85a0-96c3bbe45bd1 -secret a2df3e2c-7d77-49ee-93b9-22f10bd12c60`
 - Use structurizr-cli to push to on-premise using command - (More info on various params of push commands: https://docs.structurizr.com/cli/push)
 ```bash
-structurizr-cli push <STRUCTURIZR-CLI-PARAMETERS> -workspace <PATH-TO-WORKSPACE>
+structurizr-cli push -workspace <PATH-TO-WORKSPACE> <STRUCTURIZR-CLI-PARAMETERS>
 ```
 
-- for example: 
+- for example:
 ```bash
-structurizr-cli push -archive false -url http://localhost:8088/api -id 1 -key 0f25505d-1ebd-4cc4-b8f3-0b0e7e592599 -secret 44d7e6ac-4872-4808-b030-d0485c813913 -workspace ./demo/big-bank-plc-example/workspace.dsl
+structurizr-cli push -workspace ./demo/big-bank-plc-example/workspace.dsl -archive false <STRUCTURIZR-CLI-PARAMETERS>
 ```
 
 - If you want to check if there are no errors in the workspace before push, then you can validate using:
@@ -32,7 +32,9 @@ structurizr-cli push -archive false -url http://localhost:8088/api -id 1 -key 0f
 structurizr-cli validate -workspace ./demo/big-bank-plc-example/workspace.dsl
 ```
 
-# Stage - 1 : Basics 
+---
+
+# Stage - 1 : Basics
 ### validate
 ```bash
 structurizr-cli validate -workspace ./demo/stage-1/workspace.dsl
@@ -40,10 +42,20 @@ structurizr-cli validate -workspace ./demo/stage-1/workspace.dsl
 
 ### push
 ```bash
-structurizr-cli push -archive false -url http://localhost:8088/api -id 2 -key 354810fc-2e19-4188-baa5-2d2cce410e96 -secret d5a58637-76af-4bf9-a13c-42109af05fae -workspace ./demo/stage-1/workspace.dsl
+structurizr-cli push -archive false -workspace ./demo/stage-1/workspace.dsl <STRUCTURIZR-CLI-PARAMETERS>
 ```
 
+---
 
+# Stage - 2
+### validate
+```bash
+structurizr-cli validate -workspace ./demo/stage-2/workspace.dsl
+```
 
+### push
+```bash
+structurizr-cli push -workspace ./demo/stage-2/workspace.dsl -archive false <STRUCTURIZR-CLI-PARAMETERS>
+```
 
-
+---
