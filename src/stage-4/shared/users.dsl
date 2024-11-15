@@ -1,0 +1,1 @@
+user = person "User" "a customer interacting with the system"
