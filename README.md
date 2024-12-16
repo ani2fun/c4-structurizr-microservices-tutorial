@@ -145,7 +145,8 @@ structurizr-cli push -url http://localhost:8088/api -id WORKSPACE_ID -key YOUR_A
 
 Example:
 ```bash
-structurizr-cli push -url http://localhost:8088/api -id 1 -key API_KEY -secret API_SECRET -workspace 0_introduction/workspace.dsl
+structurizr-cli push -workspace src/stage-1/workspace.dsl -url http://localhost:8088/api -id 1 -key 13a548a6-9254-43b4-a79b-95dd6e23bde9 -secret cbd67d02-08e1-4557-8bc9-539aefb840a6
+structurizr-cli push -workspace src/stage-1/workspace.dsl -archive false <PARAMS>
 ```
 
 ## <a name="exporting"></a>Exporting Workspaces
